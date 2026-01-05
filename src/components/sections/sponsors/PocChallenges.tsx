@@ -28,7 +28,7 @@ export function PocChallenges() {
                 {poc.cases.map((item) => {
                     const Icon = icons[item.id as keyof typeof icons];
                     return (
-                        <Card key={item.id} hoverEffect className="group border-digital-purple/20 bg-black/40">
+                        <Card key={item.id} hoverEffect className="group border-digital-purple/20 bg-black/40 p-6">
                             <div className="flex items-start justify-between mb-4">
                                 <div className="p-3 bg-white/5 rounded-lg border border-white/10 group-hover:border-digital-purple transition-colors">
                                     <Icon className="w-6 h-6 text-digital-purple" />

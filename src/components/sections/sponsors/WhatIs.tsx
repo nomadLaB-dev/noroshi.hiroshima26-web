@@ -27,7 +27,7 @@ export function WhatIs() {
                 {whatIs.cards.map((card) => {
                     const Icon = icons[card.id as keyof typeof icons] || Zap;
                     return (
-                        <Card key={card.id} hoverEffect className="group">
+                        <Card key={card.id} hoverEffect className="group p-6">
                             <div className="flex flex-col h-full bg-gradient-to-b from-white/5 to-transparent">
                                 <div className="mb-4 p-3 bg-sanfrecce-purple/20 w-fit rounded-lg group-hover:bg-sanfrecce-purple/40 transition-colors border border-sanfrecce-purple/30">
                                     <Icon className="w-8 h-8 text-digital-purple group-hover:text-white transition-colors" />
