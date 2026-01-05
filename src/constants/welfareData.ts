@@ -18,7 +18,7 @@ export const WELFARE_CONTENT = {
         cta: "連携について相談する",
     },
     mission: {
-        title: "なぜ今、ITハッカソンなのか？",
+        title: "なぜ今、ハッカソンなのか？",
         description: "時代の転換点において、福祉に求められる「価値」が変わってきています。",
         points: [
             {
