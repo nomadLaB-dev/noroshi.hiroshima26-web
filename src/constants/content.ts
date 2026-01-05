@@ -28,7 +28,7 @@ export const SPONSOR_CONTENT = {
     },
     noroshi: {
         title: "NOROSHI.HIROSHIMA",
-        description: "NOROSHI.JPは単なる福祉イベントではなく、停滞する日本社会の「ねじれ」を解消し、新たな労働力のスタンダードを作るための挑戦です。",
+        description: "NOROSHI.HIROSHIMAは【AI×福祉】で広島の生産性を高めるための新しい挑戦です。",
         cards: [
             {
                 id: 1,
