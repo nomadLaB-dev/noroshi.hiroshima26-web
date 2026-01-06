@@ -22,7 +22,7 @@ export function StaffSupportSection() {
                         {staffSupport.features.map((feature, index) => (
                             <div key={index} className="flex gap-4 items-start">
                                 <div className="mt-1 flex-shrink-0 text-sanfrecce-purple">
-                                    <CheckCircle2 className="w-6 h-6" fill="currentColor" className="text-white" />
+                                    <CheckCircle2 className="w-6 h-6 text-white" fill="currentColor" />
                                 </div>
                                 <div>
                                     <h3 className="text-xl font-bold text-gray-900 mb-2">

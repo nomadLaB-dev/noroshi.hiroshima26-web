@@ -2,7 +2,7 @@ export const SPONSOR_CONTENT = {
     hero: {
         title: "AI駆動開発で、",
         subtitle: "狼煙を上げろ。",
-        description: "広島から世界を変える。新たな労働力のスタンダードを作るための挑戦。",
+        description: "広島から世界を変える。\n新たな労働力のスタンダードを作るための挑戦。",
         buttonText: "協賛パートナーに参加する",
     },
     whatIs: {
@@ -12,23 +12,23 @@ export const SPONSOR_CONTENT = {
             {
                 id: "01",
                 title: "爆発的なアイデア創出",
-                text: "異業種・異能の人材が交わることで、社内会議では生まれ得ない「想定外」の解決策がスパークします。",
+                text: "異業種・異能の人材が交わることで、\n社内会議では生まれ得ない「想定外」\nの解決策がスパークします。",
             },
             {
                 id: "02",
                 title: "超高速プロトタイピング",
-                text: "本プロジェクトではGoogle Antigravityを活用。通常数ヶ月かかる開発を、わずか数日で動く形（MVP）にします。",
+                text: "本プロジェクトではGoogle Antigravityを活用。\n通常数ヶ月かかる開発を、わずか\n数日で動く形（MVP）にします。",
             },
             {
                 id: "03",
                 title: "人材の発掘と育成",
-                text: "履歴書だけでは見えない「実装力」「リーダーシップ」「協調性」を、開発の現場で直接確認できます。",
+                text: "履歴書だけでは見えない\n「実装力」「リーダーシップ」「協調性」を、\n開発の現場で直接確認できます。",
             },
         ],
     },
     noroshi: {
         title: "NOROSHI.HIROSHIMA",
-        description: "NOROSHI.HIROSHIMAは【AI×福祉】で広島の生産性を高めるための新しい挑戦です。",
+        description: "NOROSHI.HIROSHIMAは【AI×福祉】で\n広島の生産性を高めるための\n新しい挑戦です。",
         cards: [
             {
                 id: 1,
@@ -74,19 +74,19 @@ export const SPONSOR_CONTENT = {
             {
                 step: "01",
                 title: "学習スプリント / Ignition Sprint",
-                description: "計4回のオフライン集中講義。AI駆動開発の基礎とGoogle Antigravityの操作をマスターし、開発への火を灯します。",
+                description: "計4回のオフライン集中講義。\nAI駆動開発の基礎とGoogle Antigravityの\n操作をマスターし、開発への火を灯します。",
                 duration: "2 Weeks",
             },
             {
                 step: "02",
                 title: "開発スプリント / Creation Sprint",
-                description: "提示された企業課題に対し、チームでプロトタイプを構築。中間デモ発表で現役エンジニアから直接フィードバックを受け、精度を高めます。",
+                description: "提示された企業課題に対し、\nチームでプロトタイプを構築。\n中間デモ発表で現役エンジニアから直接\nフィードバックを受け、精度を高めます。",
                 duration: "2 Weeks",
             },
             {
                 step: "03",
                 title: "改善・本番プレゼン Ascension Sprint",
-                description: "フィードバックを元にUI/UXを徹底改善。最終発表会にて、企業の意思決定層を前に渾身のソリューションをピッチします。",
+                description: "フィードバックを元にUI/UXを徹底改善。\n最終発表会にて、企業の意思決定層を前に\n渾身のソリューションをピッチします。",
                 duration: "2 Weeks",
             },
         ],
@@ -99,25 +99,25 @@ export const SPONSOR_CONTENT = {
                 id: 1,
                 title: "資産管理システム",
                 lang: "TS",
-                desc: "会社の資産を一元管理できるDBシステム。QRの生成と読み込むことで棚卸しまで実現",
+                desc: "会社の資産を一元管理できるDBシステム。\nQRの生成と読み込むことで棚卸しまで実現",
             },
             {
                 id: 2,
                 title: "契約書自動生成システム",
                 lang: "TS",
-                desc: "既存の契約書をベースにAIで契約書を生成するシステム。GoogleDriveと連携し、DocsとPDFを生成",
+                desc: "既存の契約書をベースにAIで\n契約書を生成するシステム。\nGoogleDriveと連携し、DocsとPDFを生成",
             },
             {
                 id: 3,
                 title: "出退勤管理DiscordBot",
                 lang: "DiscordJS",
-                desc: "Discord上で使えるBot。/(スラッシュ)コマンドで施設利用者の利用開始/終了をBotで管理",
+                desc: "Discord上で使えるBot。\n/(スラッシュ)コマンドで\n施設利用者の利用開始/終了をBotで管理",
             },
         ],
     },
     plans: {
         title: "SPONSOR PLANS",
-        message: "本協賛は単なる広告で終わらせません。\n「高騰するIT外注費をどう下げるか？」「採用困難な時代に、どうやってDX人材を確保するか？」\nその答えを、ノマドLaBとCodeFoxがハッカソンを通じて貴社と一緒に導き出すための、実利型パートナーシップです。",
+        message: "本協賛は単なる広告で終わらせません。\n「高騰するIT外注費をどう下げるか？」\n「採用困難な時代に、どうやってDX人材を確保するか？」\nその答えを、ノマドLaBとCodeFoxがハッカソンを通じて貴社と一緒に導き出すための、\n実利型パートナーシップです。",
         items: [
             {
                 rank: "Platinum",
@@ -163,7 +163,28 @@ export const SPONSOR_CONTENT = {
         title: "OFFICIAL PARTNERS",
         subtitle: "「広島から世界を変える」このビジョンを支援するパイオニアたち。",
         platinum: [
-            { name: "CodeFox", logo: "https://codefox.co.jp/", url: "https://codefox.co.jp/" }
+            { name: "CodeFox", logo: "/images/logo-codefox.png", url: "https://codefox.co.jp/" },
+            { name: "TBA", logo: "", url: "" },
+            { name: "TBA", logo: "", url: "" }
+        ],
+        gold: [
+            { name: "TAB", logo: "", url: "" },
+            { name: "TBA", logo: "", url: "" },
+            { name: "TBA", logo: "", url: "" },
+            { name: "TBA", logo: "", url: "" },
+            { name: "TBA", logo: "", url: "" }
+        ],
+        silver: [
+            { name: "TBA", logo: "", url: "" },
+            { name: "TBA", logo: "", url: "" },
+            { name: "TBA", logo: "", url: "" },
+            { name: "TBA", logo: "", url: "" },
+            { name: "TBA", logo: "", url: "" },
+            { name: "TBA", logo: "", url: "" },
+            { name: "TBA", logo: "", url: "" },
+            { name: "TBA", logo: "", url: "" },
+            { name: "TBA", logo: "", url: "" },
+            { name: "TBA", logo: "", url: "" }
         ]
     },
     cta: {
