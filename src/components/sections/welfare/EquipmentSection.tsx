@@ -6,12 +6,12 @@ export function EquipmentSection() {
     const { equipment } = WELFARE_CONTENT;
 
     return (
-        <section className="py-24 bg-gray-50 text-gray-900">
+        <section className="py-24 bg-transparent text-white">
             <div className="container px-4 md:px-6">
                 <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
                     {/* Left: Spec Card */}
                     <div>
-                        <div className="bg-gradient-to-br from-gray-900 to-gray-800 text-white p-8 md:p-12 rounded-2xl shadow-2xl relative overflow-hidden group">
+                        <div className="bg-gradient-to-br from-gray-900 to-black text-white p-8 md:p-12 rounded-2xl shadow-[0_0_30px_rgba(0,0,0,0.5)] border border-white/10 relative overflow-hidden group">
                             <div className="absolute top-0 right-0 p-3 bg-sanfrecce-gold text-black font-bold text-xs uppercase tracking-wider">
                                 High Spec
                             </div>
@@ -40,8 +40,8 @@ export function EquipmentSection() {
 
                     {/* Right: Steps */}
                     <div>
-                        <h3 className="text-2xl font-bold mb-8 flex items-center gap-3">
-                            <span className="flex items-center justify-center w-8 h-8 rounded-full bg-sanfrecce-purple text-white text-sm font-bold">
+                        <h3 className="text-2xl font-bold mb-8 flex items-center gap-3 text-white">
+                            <span className="flex items-center justify-center w-8 h-8 rounded-full bg-sanfrecce-purple text-white text-sm font-bold shadow-[0_0_15px_rgba(138,79,255,0.4)]">
                                 flow
                             </span>
                             導入までの流れ
@@ -52,13 +52,13 @@ export function EquipmentSection() {
                                 <div key={index} className="relative pl-8">
                                     {/* Line */}
                                     {index !== equipment.steps.length - 1 && (
-                                        <div className="absolute left-[11px] top-6 bottom-[-24px] w-0.5 bg-gray-200" />
+                                        <div className="absolute left-[11px] top-6 bottom-[-24px] w-0.5 bg-white/20" />
                                     )}
 
                                     {/* Dot */}
-                                    <div className="absolute left-0 top-1.5 w-6 h-6 rounded-full border-4 border-gray-100 bg-sanfrecce-purple" />
+                                    <div className="absolute left-0 top-1.5 w-6 h-6 rounded-full border-4 border-black bg-sanfrecce-purple shadow-[0_0_10px_rgba(138,79,255,0.4)]" />
 
-                                    <p className="text-lg font-medium text-gray-700 pt-1">
+                                    <p className="text-lg font-medium text-gray-300 pt-1">
                                         {step}
                                     </p>
                                 </div>

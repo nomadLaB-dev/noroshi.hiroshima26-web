@@ -21,7 +21,7 @@ export interface FeatureItem {
 
 export const PARTICIPANT_CONTENT = {
     hero: {
-        title: "覚醒の合図",
+        title: "未来への狼煙", // 革命の狼煙、才能の狼煙、反撃の合図、未来への狼煙、等身大の狼煙、偏見から才能へ、境界を越える、、昨日までの景色
         catchphrase: "君の「可能性」に火をつけろ。",
         subphrase: "AIという最強の相棒を武器に。広島から障害の垣根を越えて。",
         tags: ["未経験歓迎", "賞金あり", "最強のPC貸出あり"],
@@ -29,28 +29,28 @@ export const PARTICIPANT_CONTENT = {
     },
     introduction: {
         title: "NOROSHI.HIROSHIMAへようこそ",
-        message: "「自分にはスキルなんてない」「毎日同じ作業の繰り返しで、将来が不安」……そう思っていませんか？\nNOROSHI.HIROSHIMAは、AIを使いこなし、あなたの「困った」を「解決」に変える実践型ハッカソンです。\nAIがいれば、「作りたい」と思ったその日にアプリを作れる時代が来ました。",
+        message: "自分をこのように過小評価していませんか？\n「自分はスキルなんてない」･「毎日同じ作業の繰り返しで、将来が不安...」\nNOROSHI.HIROSHIMAは、AIを使いこなし、\nあなたの「困った」を「解決」に変える実践型ハッカソンです。\nAIがいれば、「作りたい」と思ったその日にアプリを作れる時代が来ました。",
     },
     support: {
-        title: "3つの「絶対挫折させない」サポート",
+        title: "「挫折しにくい」3つのサポート",
         description: "初心者が最も不安に思う「準備」と「孤独」を解消する仕組みを用意しています。",
         items: [
             {
                 id: "discord",
                 title: "24時間Discordコミュニティ",
-                description: "メンターや仲間といつでも繋がれる。困ったときはすぐ相談。",
+                description: "メンターや仲間といつでも繋がれる。\n困ったときはすぐ相談。",
                 icon: MessageCircle
             },
             {
                 id: "ama",
                 title: "事前お悩み相談会「AMA」",
-                description: "Ask Me Anything. スタート前の不安を全て解消します。",
+                description: "Ask Me Anything. \nスタート前の不安を全て解消します。",
                 icon: Heart
             },
             {
                 id: "day0",
                 title: "「Day 0」ガイド配布",
-                description: "難しい環境構築も手順書通りでOK。スタートラインまで手引きします。",
+                description: "難しい環境構築も手順書通りでOK。\nスタートラインまで手引きします。",
                 icon: BookOpen
             }
         ]
@@ -61,42 +61,42 @@ export const PARTICIPANT_CONTENT = {
             {
                 id: "route-a",
                 name: "Route A: Platinum Challenge",
-                description: "企業課題を解決。企業のリアルな業務上の負を、AIで富に変える。",
+                description: "企業課題を解決。企業のリアルな業務上の負を、\nAIで富に変える。",
                 prize: "優秀賞には賞金"
             },
             {
                 id: "route-b",
                 name: "Route B: Personal Challenge",
-                description: "自分の悩みを解決。「これがあったら便利なのに」という自身の原体験を形にする。",
+                description: "自分の悩みを解決。\n「これがあったら便利なのに」という自身の原体験を形にする。",
                 prize: "優秀賞には賞金"
             }
         ],
-        grandPrize: "すべてのチームの中から最優秀賞を選定"
+        grandPrize: "すべてのチームの中から\n最優秀賞を選定"
     },
     team: {
         title: "最強のトライアングル「3H」",
-        description: "プログラミングができなくてもいい。全く違う強みを持つ3人が集まることで、一人では届かない「想定外の答え」に到達できる。",
+        description: "プログラミングができなくてもいい。\n全く違う強みを持つ3人が集まることで、一人では届かない「想定外の答え」に到達できる。",
         message: "凸凹な3人が集まるからこそ、チームになれるんです。",
         roles: [
             {
                 id: "hacker",
                 role: "Hacker",
                 japanese: "作る人",
-                description: "AIを使いこなす司令塔。技術でアイデアを具現化する。",
+                description: "AIを使いこなす司令塔。\n技術でアイデアを具現化する。",
                 icon: Cpu
             },
             {
                 id: "hustler",
                 role: "Hustler",
                 japanese: "まとめる・伝える人",
-                description: "情熱を言葉にするリーダー。チームを鼓舞し、魅力を発信する。",
+                description: "情熱を言葉にするリーダー。\nチームを鼓舞し、魅力を発信する。",
                 icon: Flame
             },
             {
                 id: "hipster",
                 role: "Hipster",
                 japanese: "魅せる人",
-                description: "使いやすさをデザインする。ユーザー体験を最高のものにする。",
+                description: "使いやすさをデザインする。\nユーザー体験を最高のものにする。",
                 icon: Zap
             }
         ]
@@ -105,7 +105,7 @@ export const PARTICIPANT_CONTENT = {
         title: "参加条件・募集要項",
         mandatory: [
             "自力でPCのローマ字入力・検索ができる方",
-            "福祉サービス（A型・B型・移行・自立訓練等）を利用中、または検討中の方",
+            "福祉サービス（A型・B型・移行・自立訓練等）を利用中、\nまたは検討中の方",
             "障害者雇用枠で就労中の方"
         ],
         welcome: [
@@ -113,8 +113,8 @@ export const PARTICIPANT_CONTENT = {
             "Progate等での学習経験がある方"
         ],
         equipment: {
-            bring: "ノートPC持参（Win11推奨、メモリ16GB以上推奨）",
-            rental: "最強PC貸出あり: メモリ32GBの爆速ノートPC（月額5,000円）。所属事業所に相談しやすいようサポートします。"
+            bring: "ノートPC持参(Win11推奨、メモリ16GB以上推奨)",
+            rental: "最強PC貸出あり: メモリ32GBの爆速ノートPC(月額5,000円)。\n所属事業所に相談しやすいようサポートします。"
         }
     },
     schedule: {

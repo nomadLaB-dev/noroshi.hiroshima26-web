@@ -1,4 +1,5 @@
-
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/sections/user/Hero";
 import { Introduction } from "@/components/sections/user/Introduction";
 import { SupportSection } from "@/components/sections/user/SupportSection";
@@ -11,16 +12,20 @@ import { FAQSection } from "@/components/sections/user/FAQSection";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-black text-white selection:bg-digital-purple selection:text-white">
-      <Hero />
-      <Introduction />
-      <SupportSection />
-      <ChallengeRoute />
-      <TeamSection />
-      <RequirementsSection />
-      <ScheduleSection />
-      <JudgingSection />
-      <FAQSection />
-    </main>
+    <>
+      <Header />
+      <main className="min-h-screen pt-16">
+        <Hero />
+        <Introduction />
+        <SupportSection />
+        <ChallengeRoute />
+        <TeamSection />
+        <RequirementsSection />
+        <ScheduleSection />
+        <JudgingSection />
+        <FAQSection />
+      </main>
+      <Footer />
+    </>
   );
 }

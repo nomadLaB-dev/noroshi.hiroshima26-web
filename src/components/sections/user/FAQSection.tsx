@@ -9,7 +9,7 @@ export function FAQSection() {
     const { faq, hero } = PARTICIPANT_CONTENT; // Re-use hero cta text or similar if needed
 
     return (
-        <section className="py-24 bg-black relative overflow-hidden">
+        <section className="py-24 bg-transparent relative overflow-hidden">
             <div className="container px-4 md:px-6 max-w-4xl mx-auto relative z-10">
                 <h2 className="text-3xl md:text-5xl font-heading font-bold text-center text-white mb-16">
                     FAQ
@@ -17,7 +17,7 @@ export function FAQSection() {
 
                 <div className="space-y-6 mb-24">
                     {faq.map((item, index) => (
-                        <Card key={index} className="bg-zinc-900/50 border-white/10">
+                        <Card key={index} className="bg-white/5 border-white/10 hover:border-white/20 transition-colors">
                             <CardContent className="p-6 md:p-8">
                                 <h3 className="text-xl font-bold text-white mb-3 flex items-start gap-3">
                                     <span className="text-digital-purple">Q.</span>

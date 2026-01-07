@@ -12,38 +12,69 @@ body {
   background: var(--background);
   font-family: var(--font-noto-sans-jp), sans-serif;
   overflow-x: hidden;
+  cursor: url('/cursor-rocket.svg') 0 0, auto;
 }
 
 /* Custom Scrollbar for Digital Feel */
 ::-webkit-scrollbar {
   width: 8px;
 }
+
 ::-webkit-scrollbar-track {
-  background: #1a0f2e; 
+  background: #1a0f2e;
 }
+
 ::-webkit-scrollbar-thumb {
-  background: #522D80; 
+  background: #522D80;
   border-radius: 4px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
-  background: #8A4FFF; 
+  background: #8A4FFF;
 }
 
 @layer utilities {
   .animate-marquee {
     animation: marquee 25s linear infinite;
   }
+
   .animate-marquee-reverse {
     animation: marquee-reverse 25s linear infinite;
+  }
+
+  .clip-path-cyberpunk {
+    clip-path: polygon(0 0,
+        100% 0,
+        100% calc(100% - 20px),
+        calc(100% - 20px) 100%,
+        0 100%);
+  }
+
+  .clip-path-cyberpunk-inner {
+    clip-path: polygon(0 0,
+        100% 0,
+        100% calc(100% - 19px),
+        calc(100% - 19px) 100%,
+        0 100%);
   }
 }
 
 @keyframes marquee {
-  from { transform: translateX(0); }
-  to { transform: translateX(-100%); }
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
 }
 
 @keyframes marquee-reverse {
-  from { transform: translateX(-100%); }
-  to { transform: translateX(0); }
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
 }
