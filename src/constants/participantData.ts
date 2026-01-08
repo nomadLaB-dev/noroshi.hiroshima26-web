@@ -25,7 +25,7 @@ export const PARTICIPANT_CONTENT = {
         catchphrase: "君の「可能性」に火をつけろ。",
         subphrase: "AIという最強の相棒を武器に。広島から障害の垣根を越えて。",
         tags: ["未経験歓迎", "賞金あり", "最強のPC貸出あり"],
-        cta: "今すぐエントリーする（定員10チーム）",
+        cta: "今すぐエントリーする（定員30名）",
     },
     introduction: {
         title: "NOROSHI.HIROSHIMAへようこそ",

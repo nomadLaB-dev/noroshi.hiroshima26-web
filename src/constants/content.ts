@@ -163,8 +163,8 @@ export const SPONSOR_CONTENT = {
                 price: "300,000円",
                 concept: "PR × コンテンツ作成",
                 benefits: [
-                    { title: "ロゴ掲出", text: "公式サイト・会場ボードへのロゴ掲出。", value: "自社サイトやSNSで、最新技術と社会貢献を応援する企業姿勢をPRできます。" },
-                    { title: "", text: "", value: "" }
+                    { title: "動画制作", text: "プロによる1分の動画制作。", value: "広報や採用を強化したい企業様へ、1分動画で企業PRできます。" },
+                    { title: "ロゴ掲出", text: "公式サイト・会場ボードへのロゴ掲出。", value: "自社サイトやSNSで、最新技術と社会貢献を応援する企業姿勢をPRできます。" }
                 ]
             }
         ],
