@@ -68,7 +68,7 @@ function PlansTabs({ plans }: { plans: any[] }) {
     return (
         <div className="flex flex-col">
             {/* Tab Triggers */}
-            <div className="flex p-1 bg-[#1A1A2E] rounded-t-xl border-x border-t border-white/10 mb-0 overflow-x-auto relative z-10 gap-1 w-fit mx-auto md:w-full md:mx-0 justify-center">
+            <div className="flex p-1 bg-[#1A1A2E] rounded-t-xl border-x border-t border-white/10 mb-0 overflow-x-auto relative z-10 gap-1 w-full justify-start md:justify-center">
                 {plans.map((plan) => (
                     <button
                         key={plan.rank}
