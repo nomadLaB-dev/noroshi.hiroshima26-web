@@ -122,7 +122,7 @@ export const SPONSOR_CONTENT = {
             {
                 rank: "Platinum",
                 name: "Platinum Partner",
-                limit: "限定3社",
+                limit: "限定2社",
                 price: "300,000円",
                 concept: "攻めのDX × 守りの人事戦略",
                 benefits: [
@@ -148,12 +148,23 @@ export const SPONSOR_CONTENT = {
             {
                 rank: "Silver",
                 name: "Silver Partner",
-                limit: "無制限",
+                limit: "限定10社",
                 price: "30,000円",
                 concept: "地域ネットワーク × 広報",
                 benefits: [
                     { title: "経営者コミュニティ・懇親会への招待", text: "懇親会へ1名様をご招待。", value: "広島のIT・DXに関心の高い経営者層や、主催者（CodeFox進藤、ノマドLaB貞末）との交流の場を提供します。" },
                     { title: "デジタルバッジ提供 ＆ ロゴ掲出", text: "「Inclusive AI Supporter」デジタルバッジの提供と、公式サイト・会場ボードへのロゴ掲出。", value: "自社サイトやSNSで、最新技術と社会貢献を応援する企業姿勢をPRできます。" },
+                ]
+            },
+            {
+                rank: "MovieSpecial",
+                name: "MovieSpecial Partner",
+                limit: "限定3社",
+                price: "300,000円",
+                concept: "PR × コンテンツ作成",
+                benefits: [
+                    { title: "ロゴ掲出", text: "公式サイト・会場ボードへのロゴ掲出。", value: "自社サイトやSNSで、最新技術と社会貢献を応援する企業姿勢をPRできます。" },
+                    { title: "", text: "", value: "" }
                 ]
             }
         ],
@@ -164,7 +175,6 @@ export const SPONSOR_CONTENT = {
         subtitle: "「広島から世界を変える」このビジョンを支援するパイオニアたち。",
         platinum: [
             { name: "CodeFox", logo: "/images/logo-codefox.png", url: "https://codefox.co.jp/" },
-            { name: "TBA", logo: "", url: "" },
             { name: "TBA", logo: "", url: "" }
         ],
         gold: [
@@ -182,6 +192,11 @@ export const SPONSOR_CONTENT = {
             { name: "TBA", logo: "", url: "" },
             { name: "TBA", logo: "", url: "" },
             { name: "TBA", logo: "", url: "" },
+            { name: "TBA", logo: "", url: "" },
+            { name: "TBA", logo: "", url: "" },
+            { name: "TBA", logo: "", url: "" }
+        ],
+        movieSpecial: [
             { name: "TBA", logo: "", url: "" },
             { name: "TBA", logo: "", url: "" },
             { name: "TBA", logo: "", url: "" }
