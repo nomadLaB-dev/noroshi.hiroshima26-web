@@ -1,12 +1,20 @@
+"use client";
 
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { useState } from "react";
+import { ArrowRight, ChevronDown } from "lucide-react";
 import { PARTICIPANT_CONTENT } from "@/constants/participantData";
 import { Button } from "@/components/ui/Button";
 import { Card, CardContent } from "@/components/ui/Card";
+import { motion, AnimatePresence } from "framer-motion";
+import { cn } from "@/lib/utils";
 
 export function FAQSection() {
-    const { faq, hero } = PARTICIPANT_CONTENT; // Re-use hero cta text or similar if needed
+    const { faq } = PARTICIPANT_CONTENT;
+    const [openIndex, setOpenIndex] = useState<number | null>(0);
+
+    const toggleEffect = (index: number) => {
+        setOpenIndex(openIndex === index ? null : index);
+    };
 
     return (
         <section className="py-24 bg-transparent relative overflow-hidden">
@@ -15,17 +23,50 @@ export function FAQSection() {
                     FAQ
                 </h2>
 
-                <div className="space-y-6 mb-24">
+                <div className="space-y-4 mb-24">
                     {faq.map((item, index) => (
-                        <Card key={index} className="bg-white/5 border-white/10 hover:border-white/20 transition-colors">
-                            <CardContent className="p-6 md:p-8">
-                                <h3 className="text-xl font-bold text-white mb-3 flex items-start gap-3">
-                                    <span className="text-digital-purple">Q.</span>
-                                    {item.q}
-                                </h3>
-                                <p className="text-gray-300 ml-8 leading-relaxed">
-                                    {item.a}
-                                </p>
+                        <Card
+                            key={index}
+                            className={cn(
+                                "bg-white/5 border-white/10 transition-all duration-300 cursor-pointer overflow-hidden",
+                                openIndex === index ? "border-digital-purple/50 bg-white/10" : "hover:border-white/20 hover:bg-white/5"
+                            )}
+                            onClick={() => toggleEffect(index)}
+                        >
+                            <CardContent className="p-0">
+                                <div className="p-6 md:p-8 flex items-start justify-between gap-4">
+                                    <h3 className="text-xl font-bold text-white flex items-start gap-3 select-none">
+                                        <span className="text-digital-purple">Q.</span>
+                                        {item.q}
+                                    </h3>
+                                    <div className={cn(
+                                        "mt-1 text-digital-purple transition-transform duration-300 shrink-0",
+                                        openIndex === index ? "rotate-180" : "rotate-0"
+                                    )}>
+                                        <ChevronDown className="w-6 h-6" />
+                                    </div>
+                                </div>
+
+                                <AnimatePresence initial={false}>
+                                    {openIndex === index && (
+                                        <motion.div
+                                            initial={{ height: 0, opacity: 0 }}
+                                            animate={{ height: "auto", opacity: 1 }}
+                                            exit={{ height: 0, opacity: 0 }}
+                                            transition={{ duration: 0.3, ease: "easeInOut" }}
+                                        >
+                                            <div className="px-6 md:px-8 pb-6 md:pb-8 pt-0">
+                                                <div className="h-[1px] w-full bg-white/10 mb-6" />
+                                                <div className="flex gap-3">
+                                                    <span className="text-digital-purple font-bold text-xl">A.</span>
+                                                    <p className="text-gray-300 leading-relaxed whitespace-pre-line">
+                                                        {item.a}
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </motion.div>
+                                    )}
+                                </AnimatePresence>
                             </CardContent>
                         </Card>
                     ))}
