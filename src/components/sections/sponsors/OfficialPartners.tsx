@@ -3,13 +3,20 @@
 import { Section } from "@/components/ui/Section";
 import { Button } from "@/components/ui/Button";
 import { SPONSOR_CONTENT } from "@/constants/content";
-import { motion } from "framer-motion";
-import { ExternalLink, Grid, ShieldCheck, Zap } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ExternalLink, Grid, ShieldCheck, Zap, ChevronDown } from "lucide-react";
 import { PartnerCard } from "./PartnerCard";
 import { Marquee } from "@/components/ui/Marquee";
+import { useState } from "react";
+import { cn } from "@/lib/utils";
 
 export function OfficialPartners() {
-    const { partners, cta } = SPONSOR_CONTENT;
+    const { partners, cta, qna } = SPONSOR_CONTENT;
+    const [openIndex, setOpenIndex] = useState<number | null>(0);
+
+    const toggleEffect = (index: number) => {
+        setOpenIndex(openIndex === index ? null : index);
+    };
 
     return (
         <Section fullWidth className="bg-[#050510] text-white py-32 relative z-0 overflow-hidden">
@@ -105,7 +112,94 @@ export function OfficialPartners() {
                             </Marquee>
                         </div>
                     )}
+                    {/* Movie Special Partners */}
+                    {partners.movieSpecial && partners.movieSpecial.length > 0 && (
+                        <div className="mb-24">
+                            <div className="flex items-center justify-center gap-4 mb-10">
+                                <div className="h-[1px] w-12 bg-gray-800" />
+                                <h3 className="text-xl font-bold text-cyan-400 uppercase tracking-widest flex items-center gap-2">
+                                    <span className="w-2 h-2 rounded-full bg-cyan-400 shadow-[0_0_10px_#22d3ee]" />
+                                    Movie Special Partners
+                                </h3>
+                                <div className="h-[1px] w-12 bg-gray-800" />
+                            </div>
+
+                            <div className="flex flex-wrap justify-center gap-6">
+                                {partners.movieSpecial.map((partner: any, index: number) => {
+                                    const hasContent = partner.name !== "" || partner.logo !== "";
+                                    return (
+                                        <PartnerCard key={index} partner={partner} index={index} hasContent={hasContent} />
+                                    );
+                                })}
+                            </div>
+                        </div>
+                    )}
                 </div>
+
+                {/* Q&A Section */}
+                {qna && qna.items && qna.items.length > 0 && (
+                    <div className="mb-32 max-w-3xl mx-auto">
+                        <div className="text-center mb-16">
+                            <h3 className="font-heading text-3xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#8a4fff] via-[#c4b5fd] to-white mb-6 drop-shadow-[0_0_15px_rgba(138,79,255,0.4)]">
+                                {qna.title}
+                            </h3>
+                            <div className="w-24 h-1 bg-gradient-to-r from-transparent via-gray-700 to-transparent mx-auto mb-6" />
+                        </div>
+
+                        <div className="space-y-4">
+                            {qna.items.map((item: any, index: number) => (
+                                <motion.div
+                                    key={index}
+                                    initial={{ opacity: 0, y: 10 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: index * 0.1 }}
+                                    className={cn(
+                                        "bg-white/5 border border-white/10 rounded-xl overflow-hidden transition-all duration-300",
+                                        openIndex === index ? "border-digital-purple/50 bg-white/10" : "hover:border-white/20 hover:bg-white/5"
+                                    )}
+                                >
+                                    <button
+                                        onClick={() => toggleEffect(index)}
+                                        className="w-full p-6 md:p-8 flex items-start justify-between gap-4 text-left"
+                                    >
+                                        <h4 className="text-lg font-bold text-white flex items-start gap-3">
+                                            <span className="text-digital-purple">Q.</span>
+                                            {item.q}
+                                        </h4>
+                                        <div className={cn(
+                                            "mt-1 text-digital-purple transition-transform duration-300 shrink-0",
+                                            openIndex === index ? "rotate-180" : "rotate-0"
+                                        )}>
+                                            <ChevronDown className="w-6 h-6" />
+                                        </div>
+                                    </button>
+
+                                    <AnimatePresence initial={false}>
+                                        {openIndex === index && (
+                                            <motion.div
+                                                initial={{ height: 0, opacity: 0 }}
+                                                animate={{ height: "auto", opacity: 1 }}
+                                                exit={{ height: 0, opacity: 0 }}
+                                                transition={{ duration: 0.3, ease: "easeInOut" }}
+                                            >
+                                                <div className="px-6 md:px-8 pb-6 md:pb-8 pt-0">
+                                                    <div className="h-[1px] w-full bg-white/10 mb-6" />
+                                                    <div className="flex gap-3">
+                                                        <span className="text-digital-purple font-bold text-xl">A.</span>
+                                                        <p className="text-gray-300 leading-relaxed whitespace-pre-line">
+                                                            {item.a}
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </motion.div>
+                                        )}
+                                    </AnimatePresence>
+                                </motion.div>
+                            ))}
+                        </div>
+                    </div>
+                )}
 
                 {/* Final CTA Area */}
                 <motion.div
@@ -154,6 +248,6 @@ export function OfficialPartners() {
                     </div>
                 </motion.div>
             </div>
-        </Section>
+        </Section >
     );
 }
